@@ -4,7 +4,9 @@ const metaEnv = (import.meta as ImportMeta & { env?: Record<string, string | boo
 const envMode = String(metaEnv.VITE_APP_MODE ?? metaEnv.MODE ?? "production").toLowerCase();
 const isDeveloperMode = envMode === "developer" || envMode === "development";
 
+const baseURL = isDeveloperMode ? "http://localhost:5001/api" : "/api";
+
 export const api = axios.create({
-  baseURL: isDeveloperMode ? "http://localhost:5001/api" : "/api",
+  baseURL,
   headers: { "Content-Type": "application/json" },
 });
