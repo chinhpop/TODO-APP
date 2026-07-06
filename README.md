@@ -3,7 +3,7 @@
 Ứng dụng Todo App với frontend React + TypeScript và backend Express + MongoDB.
 
 ## Deploy
-- Live demo: [Todo list application](https://todo-app-ardp.onrender.com/)
+- Live demo: https://todo-app-ardp.onrender.com/
 
 ## Yêu cầu
 - Node.js 20+
