@@ -4,6 +4,7 @@
 
 ## Deploy
 - Live demo: https://todo-app-ardp.onrender.com/
+<img width="1834" height="1027" alt="image" src="https://github.com/user-attachments/assets/50ecc7c9-7515-4572-af22-a70608575f0f" />
 
 ## Yêu cầu
 - Node.js 20+
