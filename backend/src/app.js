@@ -16,14 +16,14 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Development
-if (env.nodeEnv !== "production") {
-  app.use(
-    cors({
-      origin: "http://localhost:5173",
-    })
-  );
-}
+const corsOrigins = ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost", "http://frontend"];
+
+app.use(
+  cors({
+    origin: corsOrigins,
+    credentials: true,
+  })
+);
 
 // API
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));

@@ -48,11 +48,11 @@ export function TodoItem({ task, onToggle, onEdit, onDelete }: {
         </div>
       </div>
 
-      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-150 flex-shrink-0">
-        <button onClick={() => onEdit(task)} aria-label="Edit task" className={buttonStyles.icon} title="Edit">
+      <div className="flex items-center gap-1 flex-shrink-0">
+        <button onClick={() => onEdit(task)} aria-label="Edit task" className={`${buttonStyles.icon} bg-background/80`} title="Edit">
           <Pencil size={14} />
         </button>
-        <button onClick={() => onDelete(task)} aria-label="Delete task" className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-muted-foreground transition-all duration-150 hover:bg-rose-50 hover:text-destructive active:scale-[.95]" title="Delete">
+        <button onClick={() => onDelete(task)} aria-label="Delete task" className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-muted-foreground transition-all duration-150 hover:bg-rose-50 hover:text-destructive active:scale-[.95] bg-background/80" title="Delete">
           <Trash2 size={14} />
         </button>
       </div>
